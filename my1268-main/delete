@@ -1,0 +1,32 @@
+if(username === "") {
+    alert("please write your name.");
+} else if(username.length >= 15) {
+    console.log("Too long your name.");            
+} //글자 길이에 따라 출력 변화
+
+const loginButton= document.querySelector("#login-form button");
+loginButton.addEventListener("click", onLoginBtnClick); //버튼 클릭 event
+
+const username = loginInput.value;
+console.log(username); // 유저네임 value값 출력
+
+const link = document.querySelector("a");
+link.addEventListener("click", handleLinkClick); // ()없는 것은 바로 출력이 아닌 브라우저가 해줌
+function handleLinkClick(event){
+    event.preventDefault(); 
+}
+
+givingToDo.forEach((item) => console.log("hello", item));
+
+
+const awe = [100, 200, 3000, 12 ,388];
+function aNewFilter(item){
+    return item < 3000;
+}
+console.log(awe.filter(aNewFilter)); //filter 예시
+
+const as = [{text:"aaa", id: "가가"},{text:"bbb", id:"나나"}];
+function asfilter(item){
+    return item.text !== "aaa";
+}
+    console.log(as.filter(asfilter));  //filter 예시  

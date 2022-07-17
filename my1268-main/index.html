@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>My Study Web</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='CSS/style.css'>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <p><a href="file:///C:/Users/NAM/Desktop/Visual%20Code/NomadProject-master/my1268-main/index.html">My Page</p></a>
+            <ul>
+                <li>
+                    <a href ="file:///C:/Users/NAM/Desktop/Visual%20Code/NomadProject-master/my1268-main/JavaScript.html">JavaScript</a>
+                </li>
+                <li>
+                    <a href ="#">Update</a>
+                </li>
+                <li>
+                    <a href ="file:///C:/Users/NAM/Desktop/Visual%20Code/NomadProject-master/my1268-main/React.html">React</a>
+                </li>
+            </ul>
+        </header>
+        <section>
+            <p>It is a Main-page</p>
+            <p>IF you press F5, Your eyes see two pictures!!!</p>
+            <h1 id="greeting" class ="hidden"></h1>
+            <a href ="https://developer.mozilla.org/ko/">Learn more go MDN!</a>
+            <form class ="hidden" id="login-form">
+                <input required maxlength="15" type="text" placeholder="What is your name?"></input>
+                <button>Log In</button>
+            </form>
+            <form id="todolist">
+                <input type="text" placeholder="Write list and Enter!" required></input>
+            </form> 
+            <ul id="list"></ul>
+            <div id="quotes">
+                <span></span>
+                <span></span>
+        </section>
+        <footer>
+            Go to learn!!! <a href="https://nomadcoders.co/">NoMad</a>
+        </footer>
+    </div>
+    <h2 id="clock">00:00:00</h2>
+        <span>⏰</span>
+    </div>
+    <div id ="weather"> 
+        <span></span>
+        <span></span>
+    </div>
+    <script src='JS/greeting.js'></script>
+    <script src='JS/clock.js'></script>
+    <script src='JS/quotes.js'></script>
+    <script src='JS/background.js'></script>
+    <script src='JS/todolist.js'></script>
+    <script src='JS/weather.js'></script>
+</body>
+</html>
+<!--input에서 required maxlength="15"를 이용해서 값 정할수 있음
+    input의 유효성 검사를 위해서는 input이 form안에 있어야됨
+    로그인할때마다 웹사이트가 재시작하는 이유는 form이 submit 하고있음.
+    form안에서 엔터를 누르고 input이 더 존재하지 않는다면 자동으로 submit되는 규칙-->
