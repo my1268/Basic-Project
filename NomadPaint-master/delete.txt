@@ -1,0 +1,35 @@
+const canvas = document.querySelector("canvas");
+const ctx = canvas.getContext("2d"); // 2d canvas생성
+
+const colors = [
+  "#2980b9",
+  "#e67e22",
+  "#8e44ad",
+  "#f1c40f",
+  "#34495e",
+  "#bdc3c7",
+];
+canvas.width = 800;
+canvas.height = 800;
+ctx.lineWidth = 2;
+function onClick(event) {
+  ctx.beginPath();
+  ctx.moveTo(0, 0);
+  const color = colors[Math.floor(Math.random() * colors.length)];
+  ctx.strokeStyle = color;
+  ctx.lineTo(event.offsetX, event.offsetY);
+  ctx.stroke();
+}
+
+canvas.addEventListener("mousemove", onClick);
+
+function textClick(event) {
+  const text = textInput.value;
+  if (text !== "") {
+    ctx.save();
+    ctx.lineWidth = 1;
+    ctx.font = "30px serif";
+    ctx.fillText(text, event.offsetX, event.offsetY);
+    ctx.restore();
+  }
+}

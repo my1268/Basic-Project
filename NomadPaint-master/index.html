@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas</title>
+    <link rel="stylesheet", href="style.css"></link>
+</head>
+<body>
+    <div class="color-options">
+        <input id="color" type="color"></input>
+    <div class ="color-option" style="background-color: #1abc9c;" data-color="#1abc9c"></div>
+    <div class ="color-option" style="background-color: #3498db;" data-color="#3498db"></div>
+    <div class ="color-option" style="background-color: #34495e;" data-color="#34495e"></div>
+    </div>    
+    <canvas></canvas>
+    <div class="btns">
+    <input id="lineWidth" type="range" value="5" min="1", max="10", step="0.5"></input> 
+    <button id ="Fill-Btn">💖Fill</button>
+    <button id ="reset">🧡Reset</button>
+    <button id="eraser">💛Erase</button>
+    <label for="file">
+        💚 Add Photo
+    <input type="file" accept="image/*" id="file"/>
+    </label>    
+    <input type="text" placeholder="write word!" id="text"/>
+    <button id="save">💙save Image</button>
+    </div>
+    <script src ="app.js"></script>
+</body>
+</html>

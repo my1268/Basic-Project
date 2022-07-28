@@ -1,0 +1,84 @@
+display: block; vs display: inline;
+-body면적이냐 단어의 크기만이냐 
+-inline은 단어의 크기만 나타내므로 width, height 가 안먹음.
+-inline-block은 동시에 가짐.
+-display: none; 안보임.
+
+padding *2는 width에 포함됨.
+
+vertical-align: top; // 수직관계 위로올려줌
+
+max-width: 1000px; // 화면에 1000px까지 한방에 잡아줌
+margin: 0 auto; // 상하는 0 좌우는 auto 가운데 자동정렬해줌.
+
+float: left; // 하나의 중심에 왼쪽으로 모여듬 
+-다른 태그부분을 해제하려면 clear:both; 사용
+
+display: flex; // flex 실행 방향 바뀜.
+flex-direction:column; // flex 방향 열방향으로 바꿔줌.
+flex-wrap;  // 화면줄어들때 알아서 사이사이 들감.
+justify-content: center; // 가로축 정렬 위치 잡아줌. space-between 등.
+align-items: center; // 세로축 정렬 위치 잡아줌.
+flex-grow: 1; // 남아있는 여백의 비율을 1ㄷ1ㄷ1로 맞춤  2를 넣으면 1ㄷ2ㄷ1
+flex-basis:0; // 전체 비율을 1ㄷ1ㄷ1로 맞춤 grow 쓰고 해야됨.
+flex: 1; flex: 2; flex: 1; // basic이 알아서 0되고 전체 비율1ㄷ1ㄷ1됨.
+                    하나만 flex:1; 하면 페이지 늘려도 신축성처럼 늘어남.
+align-self: center; // 스타트가 center에 시작         
+order:1; order:2; //순서 바꾸기 가능
+.item:nth-child(){} // 하나의 아이템만 바꾸기 가능
+
+display: grid;
+grid-template-columns:4fr 6fr; //비율 40 60됨 (%쓰면 스크롤생김)
+grid-template-columns:repeat(3, 1fr); //1fr 1fr 1fr 한방에쓴거임 가로로 열3개
+grid-template-columns: 200px 1fr; //왼쪽 고정 우측만 신축성처럼 가능
+grid-gap:1rem; //각각 사이공간 
+grid-auto-rows:minmax(200px, auto); //안에 크기 min 200px이고 나머지 자동 높이
+justify-items: center; 가로축 정렬 위치 잡아줌.
+align-items: center; 세로축 정렬 위치 잡아줌.
+.item:nth-child(5){
+    justify-self: center;
+    align-self: center;
+} // 하나의 아이템만 바꾸기 가능
+.item:nth-child(1){
+    grid-column:1/4; //가로로 열1부터4까지 다차지함.
+}
+.item:nth-child(4){
+    grid-column:3; // 가로로 열3부터 차지함
+    grid-row:2/4; // 세로로 행2-4까지 차지함
+}
+item 끼리 강제차지 가능 색깔 섞임. 
+
+
+transition,transform은 hover이랑 사용함!
+transition-property:width; 
+transition-duration: 2s; // 2초에 걸쳐 width가 확대.
+transition-delay: 1s; //1초 이따가 커짐.
+transition-timing-fuction: ease, ease-in, ease-out, ease-in-out; // ease-in 느리다 갑자기 빨라짐.
+transition: width 2s 1s ease; //합치기 가능.
+
+transition,transform은 hover이랑 사용함!
+transform: rotate(360deg); // 360도 각도로 회전함.
+transform: rotateX(90deg); // x축 90도 회전.
+transform: scale(0.5); // width기준 50퍼만큼 줄어듬.
+transform: scaleX(1.5); // X축1.5배 만큼 늘어남.
+transform: skew(30deg,10deg); // x축 30도 y축 10도 만큼 휘어짐.
+transform: translate(20%, 50%); // width기준 x축 20퍼 y축50퍼 만큼 이동함.
+
+animation-name: sss;
+animation-duration: 1s; //1초동안 움직임.
+animation-iteration-count: 3; //3번 반복하겠다. (infinite 무한한)
+animation-direction: alternate; //다시 원래 자리 찾아감. (reverse) 
+animation-delay: 1s; //1초 뒤에 움직임.
+animation-timing-fuction: linear; // 가속도 붙음. (ease) 검사창들가서 맘대로 적용 가능.
+animation-fill-mode:forwards; //다시 안돌아감. 마지막 자리에 멈춤.
+@keyframes sss {
+    from{
+        margin-left:0;
+    }
+    to{
+        margin-left:200px;
+    }
+}
+
+
+
