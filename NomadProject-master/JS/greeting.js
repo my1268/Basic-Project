@@ -1,4 +1,4 @@
-const loginForm = document.querySelector("#login-form");  // 쿼리셀렉터로 태그찾기
+/*const loginForm = document.querySelector("#login-form");  // 쿼리셀렉터로 태그찾기
 const loginInput = document.querySelector("#login-form input");
 const greeting = document.querySelector("#greeting"); 
 
@@ -25,3 +25,4 @@ if(savedUsername === null) {   //만약 save된 username이 없다면
 } else {
    paintGreetings(savedUsername);  // 있다면 innerText를 보여주고, h1 hidden된걸 없애라
 }
+*/

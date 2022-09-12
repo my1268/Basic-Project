@@ -1,4 +1,4 @@
-const formList = document.querySelector("#todolist");
+/*const formList = document.querySelector("#todolist");
 const ulList = document.querySelector("#list");
 const formInput = formList.querySelector("input"); //formList안에 들어있음
 
@@ -51,4 +51,4 @@ if(giveToDo !== null) {
     toDos = givingToDo;
     givingToDo.forEach(newPut);
 }
-
+*/

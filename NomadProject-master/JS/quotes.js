@@ -1,4 +1,4 @@
-const manyQuote = document.querySelector("#quotes span:first-child");
+/*const manyQuote = document.querySelector("#quotes span:first-child");
 const manyAuthor = document.querySelector("#quotes span:last-child");
 
 const quotes = [
